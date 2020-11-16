@@ -2,7 +2,7 @@
 C++ project for CSC382(Analysis of Algorithms) class at CUNY College of Staten Island
 
 ## Input
->20 .txt files that need to be compressed, using Huffman code Algorithm, into new files of smaller size
+* 20 .txt files that need to be compressed, using Huffman code Algorithm, into new files of smaller size
 
 ## Output 
 * Frequency of each character in the text file.
