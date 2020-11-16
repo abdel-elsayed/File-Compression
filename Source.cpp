@@ -1,24 +1,48 @@
 #include "Huffman.h"
-
+#include <windows.h>
+void setConsoleColor(WORD c) // Coloring the output
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}
 int main() {
 
-    vector<char> arr;
-  
-    ifstream inData("inText.txt");
-    if (inData.is_open())
-    {
-        int i = 0;
-        char c;
-        while (inData.get(c))
-        {
-            arr.push_back(c);
-            i++;
-        }
-        inData.close();
-    }
-    else cout << "Unable to open file";
+    int i = 0;
+    while (i < 20) {
+        vector<char> arr;
+        string filename = "testingFiles/inText";
+        filename += to_string(i);
+        filename += ".txt";
+       
+        ifstream inData(filename);
 
-    buildHuffmanTree(arr);
+        if (inData.is_open())
+        {
+            int i = 0;
+            char c;
+            while (inData.get(c))
+            {
+                arr.push_back(c);
+                i++;
+                
+            }
+            setConsoleColor(46);
+            cout << setw(60) << "FILENAME: " << filename << endl;
+            setConsoleColor(7);
+            Huffman(arr, filename);
+            inData.clear();
+            int uncompressed = get_file_size(filename);
+            int compressed = get_file_size(filename + "Compressed.txt");
+            cout << "\nThe size of the REGULAR file before is: " << uncompressed;
+            cout << "\nThe size of the COMPRESSED file after is: " << compressed;
+            cout << "\nThe Ratio of the compression is: " << (float)compressed / uncompressed * 100 << "%";
+            setConsoleColor(50);
+            cout << "\n\n-------------------------------------------------------------------------------------------------\n\n";
+            setConsoleColor(7); 
+            inData.close();
+        }
+        else cout << "\nUnable to open file\n";
+        i++;
+    }
 
     return 0;
 }
