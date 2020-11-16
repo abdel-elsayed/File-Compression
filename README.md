@@ -1,5 +1,5 @@
 # FileCompression
-C++ project for CSC382(Analysis of Algorithms) class at CUNY College of Staten Island
+> Text File Compression Program that uses Huffman code to Compress files into smaller size of bytes.
 
 ## Input
 * 20 .txt files that need to be compressed, using Huffman code Algorithm, into new files of smaller size
