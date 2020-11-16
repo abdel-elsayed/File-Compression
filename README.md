@@ -14,3 +14,11 @@
 ## Output Samples
 ![alt tag](https://github.com/abdel-elsayed/FileCompression/blob/main/Output/Capture1.PNG)
 ![alt tag](https://github.com/abdel-elsayed/FileCompression/blob/main/Output/Capture2.PNG)
+
+## Author
+
+* [Abdelrahman Elsayed](https://github.com/abdel-elsayed)
+
+## Project repository link
+
+https://github.com/abdel-elsayed/FileCompression
