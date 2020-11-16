@@ -11,4 +11,6 @@
 * Sizes of both the Original file and the Compressed file in bytes.
 * Ratio of compression.
 
-## Output Snippets
+## Output Samples
+![alt tag](https://github.com/abdel-elsayed/FileCompression/blob/main/Output/Capture1.PNG)
+![alt tag](https://github.com/abdel-elsayed/FileCompression/blob/main/Output/Capture2.PNG)
