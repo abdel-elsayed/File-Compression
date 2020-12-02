@@ -8,7 +8,9 @@ int main() {
 
     int i = 0;
     while (i < 20) {
+        // the array of characters to read in the text file 
         vector<char> arr;
+        // the name of the text file to be read in
         string filename = "testingFiles/inText";
         filename += to_string(i);
         filename += ".txt";
@@ -19,12 +21,11 @@ int main() {
         {
             int i = 0;
             char c;
-            while (inData.get(c))
-            {
+
+            while (inData.get(c)) {
                 arr.push_back(c);
-                i++;
-                
-            }
+                i++;}
+
             setConsoleColor(46);
             cout << setw(60) << "FILENAME: " << filename << endl;
             setConsoleColor(7);
@@ -32,8 +33,8 @@ int main() {
             inData.clear();
             int uncompressed = get_file_size(filename);
             int compressed = get_file_size(filename + "Compressed.txt");
-            cout << "\nThe size of the REGULAR file before is: " << uncompressed;
-            cout << "\nThe size of the COMPRESSED file after is: " << compressed;
+            cout << "\nThe size of the REGULAR file before is: " << uncompressed << " bytes";
+            cout << "\nThe size of the COMPRESSED file after is: " << compressed << " bytes";
             cout << "\nThe Ratio of the compression is: " << (float)compressed / uncompressed * 100 << "%";
             setConsoleColor(50);
             cout << "\n\n-------------------------------------------------------------------------------------------------\n\n";
